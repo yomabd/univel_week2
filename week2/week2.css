@@ -3,30 +3,149 @@
 
 }
 body{
+    font-family: "Big Shoulders Display", cursive;
+    font-family: "Lexend Deca", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
     margin: 0;
     padding: 0;
-    font-size: 1.2em;
+    /* font-size: 1.2em; */
+    /* background-color: grey; */
+    background-color: url("https://iconscout.com/illustrations/navigation");
 }
 
 .header{
-border: solid 1px yellow;
+/* border: solid 1px yellow; */
+background-color: #dda15e;
+padding: .2em;
 
 }
 
+
 .nav{
-display: flex;
-flex-flow: row wrap;
-justify-content: space-between;
-align-items: center;
-padding: 2px;
-
-
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+    
+    
 }
 .nav a{
     text-decoration: none;
     color: inherit;
+    color: aquamarine;
 }
 
 .nav a:hover{
-    color: transparent;
+    color: rgba(14, 68, 50, 0.666);
+}
+
+.bio{
+    padding:0 10em;
+    text-align: justify;
+    /* font-size: 1.2em; */
+}
+.bio h1{
+    text-align: center;
+    line-height: .6em;
+}
+
+.skills{
+    display: flex;
+    justify-content: center;
+    /* align-items: stretch; */
+    /* border: yellow 2px dashed; */
+    gap: 2em;
+    padding: 1.9em;
+}
+.soft-skills, .technical-skills{
+display: flex;
+flex-flow: column;
+/* justify-content: space-between; */
+align-items: center;
+flex: 0 1 500px;
+/* flex-basi; */
+/* width: 200px; */
+border-radius: 2em;
+background-color: rgba(191, 85, 10, 0.5);
+/* border: solid green 1px; */
+}
+
+#project-heading{
+    text-align: center;
+}
+.projects{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 1.2em;
+    gap: .4em;
+
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 250px;
+    /* border: solid blue 2px; */
+    background-color: rgba(191, 85, 10, 0.5);
+    border-radius: 2em;
+    padding: 1.2em;
+
+
+}
+.project a{
+    text-decoration: none;
+    color: inherit;
+    margin-top: auto;
+}
+.project a:hover{
+    color: #9f6b36;
+}
+
+.footer{
+    /* background-color: #14213d; */
+    background-color: hsl(192, 100%, 9%);
+    padding: 3em;
+    padding-top: 10em;
+  width: 100%;
+    color: rgba(255, 255, 255, 0.689);
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+.form{
+    display:flex;
+    flex-direction: column;
+}
+.form,.copyright{
+    flex: 1 1 45%;
+
+}
+.copyright{
+    align-self: flex-end;
+    text-align: end;
+}
+.input{
+    display: flex;
+    height: 2em;
+    justify-content:stretch;
+}
+input[type="email"]{
+    width: 100%;
+    border-right: 0;
+    border-radius: 5px 0 0 5px;
+    border: none;
+}
+
+input[type='submit']{
+    width: 10em;
+    border-left: 0;
+    border-radius: 0 5px 5px 0;
+    border: none;
+
 }
