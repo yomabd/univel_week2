@@ -8,13 +8,12 @@ body{
     font-weight: 400;
     font-size: 18px;
     background-image: url('./bioBG.jpg');
-    color: rgba(255, 255, 255, 0.608);
+    color: #ffffff9b;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .header{
-/* border: solid 1px yellow; */
 background-color: #dda15e;
 height: 3em;
 position:fixed;
@@ -28,21 +27,18 @@ top: 0;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
-    height: 100%;
-    /* border: solid green 2px; */
-    
-    
+    height: 100%;     
 }
 .nav a{
     text-decoration: none;
-    color: rgba(127, 255, 212, 0.778);
+    color: #7fffd4c6;
     height: 100%;
     padding: 1em;
     
 }
 
 .nav a:hover{
-    background-color: rgba(14, 68, 50, 0.666);
+    background-color: #0e4432aa;
 }
 
 .bio{
@@ -70,6 +66,7 @@ top: 0;
     justify-content: center;
     gap: 2em;
     padding: 1.9em;
+    line-height: 3em;
 }
 .soft-skills, .technical-skills{
 display: flex;
@@ -77,9 +74,9 @@ flex-flow: column;
 align-items: center;
 flex: 0 1 500px;
 border-radius: 2em;
-background-color: rgba(191, 85, 10, 0.5);
+background-color: #bf550a80;
 padding: 3em 5em;
-line-height: 3em;
+
 }
 
 #project-heading{
@@ -87,8 +84,8 @@ line-height: 3em;
 }
 .projects{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    /* align-items: center; */
     padding: 1.2em;
     gap: .4em;
 
@@ -96,9 +93,8 @@ line-height: 3em;
 .project{
     display: flex;
     flex-direction: column;
-    flex: 1 1 250px;
-    /* border: solid blue 2px; */
-    background-color: rgba(191, 85, 10, 0.5);
+    flex: 1 1 150px;
+    background-color: #bf550a80;
     border-radius: 2em;
     padding: 1.2em;
     line-height: 1.3em;
@@ -115,20 +111,18 @@ width: 100%;
     text-decoration: none;
     color: inherit;
     margin-top: auto;
-    color: rgba(127, 255, 212, 0.778);
+    color: #7fffd4c6;
 }
 .project a:hover{
     color: #9f6b36;
 }
 
 .footer{
-    /* background-color: #14213d; */
-    background-color: hsl(192, 100%, 9%);
+    background-color: #00252e;
     font-family: "Big Shoulders Display", cursive;
     padding: 3em;
-    padding-top: 10em;
-  width: 100%;
-    color: rgba(255, 255, 255, 0.689);
+    width: 100%;
+    color: #ffffffb0;
     display: flex;
     justify-content: space-between;
     
@@ -138,14 +132,14 @@ width: 100%;
 .form{
     display:flex;
     flex-direction: column;
+    flex: 2 1 40%;
 }
-.form,.copyright{
-    flex: 1 1 45%;
 
-}
 .copyright{
     align-self: flex-end;
     text-align: end;
+    flex: 1 1 30%;
+
 }
 .input{
     display: flex;
@@ -155,7 +149,6 @@ width: 100%;
 input[type="email"]{
     width: 100%;
     border-right: 0;
-    border-radius: 5px 0 0 5px;
     border: none;
 }
 
@@ -170,4 +163,76 @@ input[type='submit']{
 input[type='submit']:hover{
     background-color: white;
     cursor: pointer;
+}
+
+/* .................... Media Query ..................... */
+
+@media screen and (max-width: 1000px) {
+    body{
+        font-size: .8em;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    body{
+        font-size: .6em;
+    }
+    .footer{
+        padding: 2.5em;
+    }
+    .input{        
+        font-size: 1.2em;
+        height: 1.5em;
+    }
+    input[type='submit']{
+        font-weight: 200;
+    } 
+    .skills{
+        line-height: 2em;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    body{
+        font-size: .5em;
+    }
+    input[type='submit'],input[type='email']{
+        font-weight: 200;
+        font-size: 1.2em;
+    }
+
+    .project{
+    padding: 2em; 
+    }
+    .footer{
+        height: 25vh;
+    flex-direction: column;
+    padding: 1.2em;
+    justify-content: center;
+    
+    }
+
+    .form{
+        width: 100%;
+    }
+    .copyright{
+        text-align: start;
+
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    body{
+        font-size: .3em;
+    }
+
+    input[type='submit'], input[type='email']{
+        font-size: 1.2em;
+    }
+    input[type='submit']{
+        width: 7em;
+    }
 }
