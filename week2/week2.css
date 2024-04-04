@@ -14,6 +14,7 @@ body{
 }
 
 .header{
+/* border: solid 1px yellow; */
 background-color: #dda15e;
 height: 3em;
 position:fixed;
@@ -207,10 +208,11 @@ input[type='submit']:hover{
     padding: 2em; 
     }
     .footer{
-        height: 25vh;
+    /* height: 20vh; */
     flex-direction: column;
-    padding: 1.2em;
-    justify-content: center;
+    padding: .5em;
+    /* justify-content: center; */
+    align-items: space;
     
     }
 
