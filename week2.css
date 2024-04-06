@@ -15,7 +15,7 @@ body{
 
 .header{
 /* border: solid 1px yellow; */
-background-color: #dda15e;
+background-color: #4c2d09;
 height: 3em;
 position:fixed;
 width: 100%;
@@ -45,7 +45,7 @@ top: 0;
 .bio{
     padding:0 10em;
     margin-top: 5em;
-    text-align: justify;
+    /* text-align: justify; */
     height: calc(100vh - 3em);
     display: flex;
     flex-direction: column;
@@ -68,6 +68,8 @@ top: 0;
     gap: 2em;
     padding: 1.9em;
     line-height: 3em;
+    /* background-color: #bf550a80; */
+
 }
 .soft-skills, .technical-skills{
 display: flex;
@@ -75,30 +77,40 @@ flex-flow: column;
 align-items: center;
 flex: 0 1 500px;
 border-radius: 2em;
-background-color: #bf550a80;
+/* background-color: #bf550a80; */
 padding: 3em 5em;
 
 }
 
+.soft-skills{
+
+    border-right: double grey 2px;
+    ;
+}
+.technical-skills{
+    border-left: double grey 2px;
+
+}
 #project-heading{
     text-align: center;
+    margin-top: 3em;
 }
 .projects{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 1.2em;
-    gap: .4em;
+    gap: .7em;
 
 }
 .project{
     display: flex;
     flex-direction: column;
-    flex: 1 1 150px;
+    flex: 1 1 200px;
     background-color: #bf550a80;
     border-radius: 2em;
     padding: 1.2em;
-    line-height: 1.3em;
+    line-height: 1.2em;
     gap: .8em;
 }
 
@@ -148,7 +160,7 @@ width: 100%;
     justify-content:stretch;
 }
 input[type="email"]{
-    width: 100%;
+    width:60%;
     border-right: 0;
     border: none;
 }
@@ -168,73 +180,129 @@ input[type='submit']:hover{
 
 /* .................... Media Query ..................... */
 
-@media screen and (max-width: 1000px) {
+ @media screen and (max-width: 1000px) {
     body{
         font-size: .8em;
     }
 }
 
-@media screen and (max-width: 700px) {
+.bio{
+    padding: 0 8em;
+    height: 50vh;
+    margin-top: 4em;
 
-    body{
-        font-size: .6em;
-    }
-    .footer{
-        padding: 2.5em;
-    }
-    .input{        
-        font-size: 1.2em;
-        height: 1.5em;
-    }
-    input[type='submit']{
-        font-weight: 200;
-    } 
-    .skills{
-        line-height: 2em;
-    }
+}
+.skills{
+    padding: .9em;
+    line-height: 2em;
+}
+
+.soft-skills,.technical-skills{
+padding: 2.3em 4.3em;
+}
+
+.footer{
+    font-size: .8em;
+    padding: 3em;
+}
+.input{
+    height: 1.8em;
+}
+input[type='submit']{
+    /* font-size: 1.2em; */
+    font-weight: 100;
+    width: 8em;
+    font-size: 1.1em;
+
 }
 
 
-@media screen and (max-width: 450px) {
+
+@media screen and (max-width: 500px) {
+
     body{
-        font-size: .5em;
+        font-size: .7em;
     }
-    input[type='submit'],input[type='email']{
-        font-weight: 200;
-        font-size: 1.2em;
+
+    .bio{
+        padding: 0 6em;
+        margin-top: 3.5em;
     }
+
+    .skills{
+        flex-direction: column;
+        padding: 5em;
+        /* justify-content: center; */
+    }
+
+    .soft-skills,.technical-skills{
+        /* padding: 2em 4em; */
+        flex: 0 0 200px;
+        }
+
+    .projects{
+        flex-direction: column-reverse;
+        padding: 3em;
+        gap: 5em;        
+        }
 
     .project{
-    padding: 2em; 
+        padding: 3em;
+        /* outline: invert 2px dashed; */
+        gap: 2em;
     }
+
     .footer{
-    /* height: 20vh; */
-    flex-direction: column;
-    padding: .5em;
-    /* justify-content: center; */
-    align-items: space;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 2.7em;
+
+        
+        }
+    .form{
+        width: 70%;
+    }
+    .input{
+        height: 1.6em;
+    }
+    input[type='submit']{
+        font-weight: 100;
+        width: 7em;
+        /* font-size: 1.1em; */
     
     }
+    input[type='submit'], input[type='email']{
+        font-size: 1.1em;
+    } 
 
-    .form{
-        width: 100%;
-    }
-    .copyright{
-        text-align: start;
-
-    }
 }
-
 
 @media screen and (max-width: 375px) {
     body{
-        font-size: .3em;
+        font-size: .6em;
+    }
+    .bio{
+        padding: 0 4em;
+        margin-top: 3em;
     }
 
     input[type='submit'], input[type='email']{
-        font-size: 1.2em;
+        font-size: .9em;
+    } 
+    .projects{
+        padding: 1.5em;
     }
-    input[type='submit']{
-        width: 7em;
+    .project{
+        padding: 2em;
+        gap: 1.7em;
     }
+    .skills{
+        padding: 3em;
+    }
+    .footer{
+        padding: 1.5em;
+
+    }
+   
 }
